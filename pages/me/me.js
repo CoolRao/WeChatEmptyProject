@@ -1,8 +1,8 @@
 import {
-  UsreModel
+  UserModel
 } from '../../models/user.js'
 
-let userModel = new UsreModel()
+let userModel = new UserModel()
 
 Page({
 
