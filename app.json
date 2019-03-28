@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/other/other",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChatEmptyProject",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "selectedIconPath": "/images/tab/home.png",
+        "iconPath": "/images/tab/home_normal.png",
+        "text": "home"
+      },
+      {
+        "pagePath": "pages/other/other",
+        "selectedIconPath": "/images/tab/setting.png",
+        "iconPath": "/images/tab/setting_normal.png",
+        "text": "other"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "selectedIconPath": "/images/tab/me.png",
+        "iconPath": "/images/tab/me_normal.png",
+        "text": "me"
+      }
+    ]
+  }
+}
