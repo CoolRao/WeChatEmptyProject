@@ -1,37 +1,16 @@
-
-
+<view class='container'>
   <view wx:for="{{gankLists}}" wx:key='item._id'>
-    <image src='{{item.url}}'></image>
+    <image src='{{item.url}}' class='list-img'  mode='scaleToFill'></image>
   </view>
+</view>
 
 
-  <!-- 广告遮罩 -->
-    <l-mask
-      show="{{adConfig.show}}"
-      opacity="{{adConfig.opacity}}"
-      z-index="{{adConfig.zIndex}}"
-      center="{{adConfig.center}}"
-      locked="{{adConfig.locked}}"
-      full-screen="{{adConfig.fullScreen}}"
-      bind:lintap="hiddenAdMask"
-    >
-    <view class='ad'>广告</view>
-    </l-mask>
+<!-- 广告遮罩 -->
+<l-mask show="{{adConfig.show}}" opacity="{{adConfig.opacity}}" z-index="{{adConfig.zIndex}}" center="{{adConfig.center}}" locked="{{adConfig.locked}}" full-screen="{{adConfig.fullScreen}}" bind:lintap="hiddenAdMask">
+  <view class='ad'>广告</view>
+</l-mask>
 
 
-      <!-- toast -->
-  <l-toast
-    show="{{toastCongif.show}}"
-    title="{{toastCongif.title}}"
-    icon="{{toastCongif.icon}}"
-    icon-style="{{toastCongif.iconStyle}}"
-    image="{{toastCongif.image}}"
-    image-style="{{toastCongif.imageStyle}}"
-    placement="{{toastCongif.placement}}"
-    duration="{{toastCongif.duration}}"
-    center="{{toastCongif.center}}"
-    mask="{{toastCongif.mask}}"  
-  />
-
- 
-  
+<!-- toast -->
+<l-toast show="{{toastCongif.show}}" title="{{toastCongif.title}}" icon="{{toastCongif.icon}}" icon-style="{{toastCongif.iconStyle}}" image="{{toastCongif.image}}" image-style="{{toastCongif.imageStyle}}" placement="{{toastCongif.placement}}" duration="{{toastCongif.duration}}"
+  center="{{toastCongif.center}}" mask="{{toastCongif.mask}}" />

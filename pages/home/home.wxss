@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+
+.list-img{
+  width: 730rpx;
+  height: 900rpx;
+}
+
 .ad{
   width: 300rpx;
   height: 400rpx;
