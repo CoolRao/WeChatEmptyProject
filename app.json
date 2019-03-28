@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/other/other",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/detial/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

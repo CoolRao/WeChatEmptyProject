@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-   
-
+      "l-mask": "/dist/mask/index",
+          "l-toast": "/dist/toast/index"
   }
 }

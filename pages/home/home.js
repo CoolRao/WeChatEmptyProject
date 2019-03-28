@@ -1,5 +1,6 @@
-
-import {HomeModel} from '../../models/home.js'
+import {
+  HomeModel
+} from '../../models/home.js'
 let gankModel = new HomeModel()
 
 
@@ -9,21 +10,87 @@ Page({
    * 页面的初始数据
    */
   data: {
-      gankLists:[]
+    gankLists: [],
+    adConfig: {},
+    toastCongif:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    gankModel.getFuli(30,1,(data)=>{
-        this.setData({
-          gankLists:data
-        })
+  onLoad: function(options) {
+    gankModel.getFuli(30, 1, (data) => {
+      this.setData({
+        gankLists: data
+      })
     })
   },
 
-  onShareAppMessage(){
+  showToast:function(){
+    this.setData({
+      toastCongif: {
+        show: true,
+        title: "打开宝箱中...",
+        icon: "loading",
+        iconStyle: '',
+        image: "",
+        imageStyle: "",
+        placement: '',
+        duration: 2000,
+        center: false,
+        mask: false
+      }
+    })
+  },
 
+hiddenToast:function(){
+  his.setData({
+    toastCongif: {
+      show: false,
+      title: "打开宝箱中...",
+      icon: "loading",
+      iconStyle: '',
+      image: "",
+      imageStyle: "",
+      placement: '',
+      duration: 2000,
+      center: false,
+      mask: false
+    }
+  })
+},
+
+
+  onShow: function() {
+    this.setData({
+      adConfig: {
+        show: true,
+        opacity: .5,
+        zIndex: 99,
+        center: true,
+        locked: false,
+      }
+    })
+  },
+
+  hiddenAdMask:function(e){
+    this.setData({
+      adConfig: {
+        show: false,
+        opacity: .5,
+        zIndex: 99,
+        center: true,
+        locked: false,
+      }
+    })
+  },
+
+
+  onShareAppMessage() {
+
+  },
+
+  onReachBottom(){
+    this.showToast()
   }
 })

@@ -7,3 +7,11 @@
   align-items: center;
 }
 
+.ad{
+  width: 300rpx;
+  height: 400rpx;
+  background: red;
+  text-align: center;
+  line-height: 400rpx;
+}
+
