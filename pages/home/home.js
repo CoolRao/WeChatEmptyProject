@@ -12,7 +12,7 @@ Page({
   data: {
     gankLists: [],
     adConfig: {},
-    toastCongif:{},
+    toastCongig:{},
     showLoadMore:true
   },
 
@@ -29,8 +29,8 @@ Page({
 
   showToast:function(){
     this.setData({
-      toastCongif: {
-        show: false,
+      toastCongig: {
+        show: true,
         title: "打开宝箱中...",
         icon: "loading",
         iconStyle: '',
@@ -45,8 +45,8 @@ Page({
   },
 
 hiddenToast:function(){
-  his.setData({
-    toastCongif: {
+  this.setData({
+    toastCongig: {
       show: false,
       title: "打开宝箱中...",
       icon: "loading",
@@ -92,6 +92,7 @@ hiddenToast:function(){
   },
 
   onReachBottom(){
+    this.showToast()
     gankModel.getFuli(false, (data) => {
       this.setData({
         gankLists: this.data.gankLists.concat(data)

@@ -1,6 +1,7 @@
 
-
-
+<import src='../common/toast.wxml' />
+<import src='../common/loadmore.wxml' />
+<import src='../common/mask.wxml' />
 
 <view class='container'>
   <view wx:for="{{gankLists}}" wx:key='item._id'>
@@ -9,22 +10,15 @@
 </view>
 
 
-<!-- 广告遮罩 -->
-<l-mask show="{{adConfig.show}}" opacity="{{adConfig.opacity}}" z-index="{{adConfig.zIndex}}" center="{{adConfig.center}}" locked="{{adConfig.locked}}" full-screen="{{adConfig.fullScreen}}" bind:lintap="hiddenAdMask">
-  <view class='ad'>广告</view>
-</l-mask>
+<!-- mask -->
+<template is='mask' data='{{adConfig}}'></template>
 
 
 <!-- toast -->
-<l-toast show="{{toastCongif.show}}" title="{{toastCongif.title}}" icon="{{toastCongif.icon}}" icon-style="{{toastCongif.iconStyle}}" image="{{toastCongif.image}}" image-style="{{toastCongif.imageStyle}}" placement="{{toastCongif.placement}}" duration="{{toastCongif.duration}}"
-  center="{{toastCongif.center}}" mask="{{toastCongif.mask}}" />
+<template is='toast' data='{{toastCongig}}'></template>
 
 
-  <!-- 加载更多.. -->
-<l-loadmore show="{{showLoadMore}}">
-  <view slot="custom" class="custom-container">
-    <image src="/images/static/loadmor.gif" class="custom-img"></image>
-    <text class="custom-txt">加载中...</text>
-  </view>
-</l-loadmore>
+  <!-- loadmore.. -->
+  <template is='loadmore' data='{{showLoadMore}}'></template>
+
 

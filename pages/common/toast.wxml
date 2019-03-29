@@ -1,0 +1,5 @@
+<!-- toast -->
+<template name="toast">
+<l-toast show="{{toastCongig.show}}" title="{{toastCongig.title}}" icon="{{toastCongig.icon}}" icon-style="{{toastCongig.iconStyle}}" image="{{toastCongig.image}}" image-style="{{toastCongig.imageStyle}}" placement="{{toastCongig.placement}}" duration="{{toastCongig.duration}}"
+  center="{{toastCongig.center}}" mask="{{toastCongig.mask}}" />
+</template>
