@@ -1,0 +1,3 @@
+<template name="loading">
+  <l-toast show="{{showLoading}}" title="正在加载..." icon="loading" icon-style="" image="" image-style="" placement="" duration="180000" center="{{false}}" mask="false" />
+</template>

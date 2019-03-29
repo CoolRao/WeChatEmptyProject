@@ -1,3 +1,9 @@
+
+<import src='../common/loading.wxml' />
+
 <view class="container">
   <l-avatar text="月野君" placement="bottom" size="200" bind:lintapcatch="clickHeadImg" src="{{imgHeadUrl}}" />
 </view>
+
+<!-- toast -->
+<template is='loading' data='{{showLoading}}'></template>

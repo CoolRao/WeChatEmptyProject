@@ -5,10 +5,12 @@ import {
 import {
   CommonModel
 } from '../../models/common.js'
-
+import {
+  ViewModel
+} from '../../models/view.js'
 let userModel = new UserModel()
 let commonModel = new CommonModel()
-
+let viewModel = new ViewModel()
 Page({
 
   /**
@@ -22,7 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onShow: function(options) {
-
+      viewModel.showLoading(this)
   },
 
   clickHeadImg: function(e) {
