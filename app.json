@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/other/other",
     "pages/me/me",
+    "pages/other/other",
     "pages/detial/detail"
   ],
   "window": {

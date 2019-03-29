@@ -1,6 +1,10 @@
+
+
+
+
 <view class='container'>
   <view wx:for="{{gankLists}}" wx:key='item._id'>
-    <image src='{{item.url}}' class='list-img'  mode='scaleToFill'></image>
+    <image src='{{item.url}}' class='list-img' mode='scaleToFill'></image>
   </view>
 </view>
 
@@ -14,3 +18,13 @@
 <!-- toast -->
 <l-toast show="{{toastCongif.show}}" title="{{toastCongif.title}}" icon="{{toastCongif.icon}}" icon-style="{{toastCongif.iconStyle}}" image="{{toastCongif.image}}" image-style="{{toastCongif.imageStyle}}" placement="{{toastCongif.placement}}" duration="{{toastCongif.duration}}"
   center="{{toastCongif.center}}" mask="{{toastCongif.mask}}" />
+
+
+  <!-- 加载更多.. -->
+<l-loadmore show="{{showLoadMore}}">
+  <view slot="custom" class="custom-container">
+    <image src="/images/static/loadmor.gif" class="custom-img"></image>
+    <text class="custom-txt">加载中...</text>
+  </view>
+</l-loadmore>
+

@@ -12,14 +12,15 @@ Page({
   data: {
     gankLists: [],
     adConfig: {},
-    toastCongif:{}
+    toastCongif:{},
+    showLoadMore:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    gankModel.getFuli(30, 1, (data) => {
+    gankModel.getFuli(true,(data) => {
       this.setData({
         gankLists: data
       })
@@ -29,7 +30,7 @@ Page({
   showToast:function(){
     this.setData({
       toastCongif: {
-        show: true,
+        show: false,
         title: "打开宝箱中...",
         icon: "loading",
         iconStyle: '',
@@ -91,6 +92,10 @@ hiddenToast:function(){
   },
 
   onReachBottom(){
-    this.showToast()
+    gankModel.getFuli(false, (data) => {
+      this.setData({
+        gankLists: this.data.gankLists.concat(data)
+      })
+    })
   }
 })
