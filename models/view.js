@@ -1,3 +1,5 @@
+
+//封装常用 加载状态
 class ViewModel {
   constructor() {}
 

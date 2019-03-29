@@ -25,10 +25,6 @@ Page({
         gankLists: data
       })
     })
-
-    wx.showToast({
-      title: '',
-    })
   },
 
   showToast:function(){
