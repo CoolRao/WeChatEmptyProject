@@ -1,7 +1,11 @@
 import {
   HomeModel
 } from '../../models/home.js'
-let gankModel = new HomeModel()
+var gankModel = new HomeModel()
+import {
+  ViewModel
+} from '../../models/view.js'
+var viewModel = new ViewModel()
 
 
 Page({
@@ -11,79 +15,28 @@ Page({
    */
   data: {
     gankLists: [],
-    adConfig: {},
-    toastCongig:{},
-    showLoadMore:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    gankModel.getFuli(true,(data) => {
+    gankModel.getFuli(true, (data) => {
       this.setData({
         gankLists: data
       })
     })
   },
 
-  showToast:function(){
-    this.setData({
-      toastCongig: {
-        show: true,
-        title: "打开宝箱中...",
-        icon: "loading",
-        iconStyle: '',
-        image: "",
-        imageStyle: "",
-        placement: '',
-        duration: 2000,
-        center: false,
-        mask: false
-      }
-    })
-  },
-
-hiddenToast:function(){
-  this.setData({
-    toastCongig: {
-      show: false,
-      title: "打开宝箱中...",
-      icon: "loading",
-      iconStyle: '',
-      image: "",
-      imageStyle: "",
-      placement: '',
-      duration: 2000,
-      center: false,
-      mask: false
-    }
-  })
-},
-
-
   onShow: function() {
-    this.setData({
-      adConfig: {
-        show: true,
-        opacity: .5,
-        zIndex: 99,
-        center: true,
-        locked: false,
-      }
-    })
-  },
+    // viewModel.showToast(this,"你好")
+    // viewModel.showLoading(this,"吃了没?")
+    // viewModel.showMask(this)
+    //viewModel.showDialog(this,"你好","确定要死了")
+    // viewModel.showLoadMore(this)
+    // viewModel.loadMoreComplete(this)
+    // viewModel.hiddenLoadMore(this)
 
-  hiddenAdMask:function(e){
-    this.setData({
-      adConfig: {
-        show: false,
-        opacity: .5,
-        zIndex: 99,
-        center: true,
-        locked: false,
-      }
-    })
   },
 
 
@@ -91,8 +44,7 @@ hiddenToast:function(){
 
   },
 
-  onReachBottom(){
-    this.showToast()
+  onReachBottom() {
     gankModel.getFuli(false, (data) => {
       this.setData({
         gankLists: this.data.gankLists.concat(data)

@@ -1,7 +1,11 @@
-
 <import src='../common/toast.wxml' />
 <import src='../common/loadmore.wxml' />
 <import src='../common/mask.wxml' />
+<import src='../common/loading.wxml' />
+<import src='../common/dialog.wxml' />
+<import src='../common/loadmore.wxml' />
+
+
 
 <view class='container'>
   <view wx:for="{{gankLists}}" wx:key='item._id'>
@@ -11,14 +15,12 @@
 
 
 <!-- mask -->
-<template is='mask' data='{{adConfig}}'></template>
-
-
+<template is='mask' data='{{maskConfig}}'></template>
 <!-- toast -->
-<template is='toast' data='{{toastCongig}}'></template>
-
-
-  <!-- loadmore.. -->
-  <template is='loadmore' data='{{showLoadMore}}'></template>
-
-
+<template is='toast' data='{{toastConfig}}'></template>
+<!-- loadmore.. -->
+<template is='loadmore' data='{{loadMoreConfig}}'></template>
+<!-- loading -->
+<template is='loading' data='{{loadingConfig}}'></template>
+<!-- dialog -->
+<template is='dialog' data='{{dialogConfig}}'></template>

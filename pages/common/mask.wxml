@@ -1,5 +1,5 @@
 <template name="mask">
-  <l-mask show="{{adConfig.show}}" opacity="{{adConfig.opacity}}" z-index="{{adConfig.zIndex}}" center="{{adConfig.center}}" locked="{{adConfig.locked}}" full-screen="{{adConfig.fullScreen}}" bind:lintap="hiddenAdMask">
+  <l-mask show="{{maskConfig.show}}" opacity="{{maskConfig.opacity}}" z-index="{{maskConfig.zIndex}}" center="{{maskConfig.center}}" locked="{{maskConfig.locked}}" full-screen="{{maskConfig.fullScreen}}" bind:lintap="hiddenAdMask">
     <view class='ad'>广告</view>
   </l-mask>
 </template>

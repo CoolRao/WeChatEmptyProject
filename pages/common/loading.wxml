@@ -1,3 +1,5 @@
+<!-- loading -->
 <template name="loading">
-  <l-toast show="{{showLoading}}" title="正在加载..." icon="loading" icon-style="" image="" image-style="" placement="" duration="180000" center="{{false}}" mask="false" />
+<l-toast show="{{loadingConfig.show}}" title="{{loadingConfig.title}}" icon="{{loadingConfig.icon}}" icon-style="{{loadingConfig.iconStyle}}" image="{{loadingConfig.image}}" image-style="{{loadingConfig.imageStyle}}" placement="{{loadingConfig.placement}}" duration="{{loadingConfig.duration}}"
+  center="{{loadingConfig.center}}" mask="{{loadingConfig.mask}}" />
 </template>

@@ -37,5 +37,10 @@
         "text": "me"
       }
     ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "l-toast": "/dist/toast/index",
+    "l-message": "/dist/message/index"
   }
 }

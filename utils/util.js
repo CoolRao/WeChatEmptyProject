@@ -11,7 +11,7 @@ const random = function generateMixed(n) {
 
 function breakSection(text) {
   
-  // let s=
+
 }
 
 module.exports = {

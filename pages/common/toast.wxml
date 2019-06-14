@@ -1,5 +1,5 @@
 <!-- toast -->
 <template name="toast">
-<l-toast show="{{toastCongig.show}}" title="{{toastCongig.title}}" icon="{{toastCongig.icon}}" icon-style="{{toastCongig.iconStyle}}" image="{{toastCongig.image}}" image-style="{{toastCongig.imageStyle}}" placement="{{toastCongig.placement}}" duration="{{toastCongig.duration}}"
-  center="{{toastCongig.center}}" mask="{{toastCongig.mask}}" />
+<l-toast show="{{toastConfig.show}}" title="{{toastConfig.title}}" icon="{{toastConfig.icon}}" icon-style="{{toastConfig.iconStyle}}" image="{{toastConfig.image}}" image-style="{{toastConfig.imageStyle}}" placement="{{toastConfig.placement}}" duration="{{toastConfig.duration}}"
+  center="{{toastConfig.center}}" mask="{{toastConfig.mask}}" />
 </template>

@@ -1,8 +1,3 @@
 <template name="loadmore">
-  <l-loadmore show="{{showLoadMore}}">
-    <view slot="custom" class="custom-container">
-      <image src="/images/static/loadmor.gif" class="custom-img"></image>
-      <text class="custom-txt">加载中...</text>
-    </view>
-  </l-loadmore>
+  <l-loadmore show="{{loadMoreConfig.show}}" type="{{loadMoreConfig.type}}" color="{{loadMoreConfig.color}}" line="{{loadMoreConfig.line}}" end-text="{{loadMoreConfig.endText}}" loading-text="{{loadMoreConfig.loadingText}}" />
 </template>
