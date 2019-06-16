@@ -1,5 +1,7 @@
 <template name="mask">
   <l-mask show="{{maskConfig.show}}" opacity="{{maskConfig.opacity}}" z-index="{{maskConfig.zIndex}}" center="{{maskConfig.center}}" locked="{{maskConfig.locked}}" full-screen="{{maskConfig.fullScreen}}" bind:lintap="hiddenAdMask">
-    <view class='ad'>广告</view>
+    <view class='ad'>
+    <image class='ad'  src='{{picUrl}}' mode='scaleToFill'></image>
+    </view>
   </l-mask>
 </template>

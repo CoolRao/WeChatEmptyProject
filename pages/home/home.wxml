@@ -9,13 +9,13 @@
 
 <view class='container'>
   <view wx:for="{{gankLists}}" wx:key='item._id'>
-    <image src='{{item.url}}' class='list-img' mode='scaleToFill'></image>
+    <image src='{{item.url}}' class='list-img' mode='scaleToFill' data-url="{{item.url}}"bindtap='onClickItem'></image>
   </view>
 </view>
 
 
 <!-- mask -->
-<template is='mask' data='{{maskConfig}}'></template>
+<template is='mask' data='{{maskConfig,picUrl}}'></template>
 <!-- toast -->
 <template is='toast' data='{{toastConfig}}'></template>
 <!-- loadmore.. -->

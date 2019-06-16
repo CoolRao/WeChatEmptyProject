@@ -40,7 +40,10 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
+    "l-mask": "/dist/mask/index",
     "l-toast": "/dist/toast/index",
+    "l-dialog": "/dist/dialog/index",
+    "l-loadmore": "/dist/loadmore/index",
     "l-message": "/dist/message/index"
   }
 }

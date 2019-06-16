@@ -14,11 +14,10 @@
 }
 
 .ad{
-  width: 300rpx;
-  height: 400rpx;
+  width: 750rpx;
+  height: 1300rpx;
   background: red;
   text-align: center;
-  line-height: 400rpx;
 }
 .custom-container{
   display: flex;

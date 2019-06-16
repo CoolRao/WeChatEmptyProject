@@ -31,13 +31,24 @@ Page({
   onShow: function() {
     // viewModel.showToast(this,"你好")
     // viewModel.showLoading(this,"吃了没?")
-    // viewModel.showMask(this)
+    //viewModel.showMask(this)
     //viewModel.showDialog(this,"你好","确定要死了")
     // viewModel.showLoadMore(this)
     // viewModel.loadMoreComplete(this)
     // viewModel.hiddenLoadMore(this)
 
   },
+
+  onClickItem: function(event) {
+    viewModel.showMask(this)
+    let url = event.currentTarget.dataset.url
+    console.log("url: " + url)
+    this.setData({
+      picUrl: url
+    })
+  },
+
+
 
 
   onShareAppMessage() {

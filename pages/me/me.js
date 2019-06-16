@@ -24,12 +24,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onShow: function(options) {
-      viewModel.showLoading(this)
+
   },
 
   clickHeadImg: function(e) {
     commonModel.getPicture((imgPath) => {
-      console.log("照片临时路径...")
       this.setData({
         imgHeadUrl: imgPath
 
